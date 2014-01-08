@@ -1,13 +1,16 @@
-var isPress=false,x,y;
+var isPress=false,x,y,color;
 
 $().ready(function(){
+    //setting Width, Height
     $('svg').attr('width',$(document).width());
     $('svg').attr('height',$(document).height());
     $(window).resize(function() {
         $('svg').attr('width',$(window).width());
         $('svg').attr('height',$(window).height());
-        //update stuff
     });
+    
+    //setting color picker
+    $('#colorpicker').farbtastic('#color');
     
     
     $('svg').on('mousedown',function(e){
@@ -44,7 +47,7 @@ $().ready(function(){
                         y1:y,
                         x2:e.offsetX,
                         y2:e.offsetY,
-                        stroke:'rgb(255,0,0)',
+                        stroke:$('#color').val(),
                         'stroke-width':2})
                     .appendTo($(this));
             x=e.offsetX;

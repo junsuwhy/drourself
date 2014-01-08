@@ -1,5 +1,12 @@
 svg {
-    width: 800px;
-    height: 600px;   
     margin:0;
+}
+#cpbox{
+    position:fixed;
+    margin-left: 0;
+    margin-top: 0;
+}
+#canvas{
+    position:fixed;
+    margin-top: 0;
 }
